@@ -8,6 +8,7 @@ botones.forEach(boton => {
 
         if (boton.id === "c") {
             pantalla.textContent = "0";
+            pantalla.style.color = "white";
             return;
         }
 
@@ -26,7 +27,18 @@ botones.forEach(boton => {
             boton.classList.add('bounce-anim');
 
             try {
-                pantalla.textContent = eval(pantalla.textContent);
+                let calculo = pantalla.textContent.replace("%", "/100*");
+                pantalla.textContent = eval(calculo);
+                pantalla.classList.remove("flash-anim");
+                void pantalla.offsetWidth;   
+                if (Number(pantalla.textContent) < 0) {
+                   pantalla.style.color = "red";
+                } else {
+                   pantalla.style.color = "white";
+            }
+
+                
+                   
                 pantalla.classList.remove('flash-anim');
                 void pantalla.offsetWidth;
                 pantalla.classList.add('flash-anim');

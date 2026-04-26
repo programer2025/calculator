@@ -189,6 +189,12 @@ body::after {
     border-color: rgba(230, 87, 102, 0.4);
 }
 
+#c {
+    background: rgba(0, 10, 15, 0.35);
+    border-color: rgba(49, 72, 85, 0.4);
+}
+
+
 #igual:hover {
     background: rgba(230, 87, 102, 0.75);
     box-shadow: 0 0 18px rgba(230, 87, 102, 0.4);
